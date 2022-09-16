@@ -1,0 +1,151 @@
+@media (min-width:600px) {
+    // Header
+    header {
+        > article {
+            flex-direction: column;
+            background-color: unset;
+        }
+
+        div {
+            align-items: center;
+        }
+
+        [class^="fa-"] {
+            padding: 1.5%;
+            border-radius: 50%;
+            background-color: white;
+            font-size: 30px;
+        }
+
+        [class*="fa-bars"] {
+            background-color: $defaultColor;
+            border-radius: 0%;
+            padding: 3.5%;
+            max-width: 5vh;
+            max-height: 5vh;
+        }
+        
+        nav {
+            padding: 0;
+            box-shadow: none;
+            height: 5vh;
+        }
+    
+        details {
+            height: 100%;
+            overflow: hidden;
+        }
+    
+        details[open] {
+            overflow: visible;
+        }
+
+    }
+
+    // Main
+    // Main-Service
+    .services {
+        > article:nth-child(2) {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        > article:nth-child(2) aside {
+            width: 43%;
+            height: 28vh;
+            padding: 2%;
+        }
+
+        > article:nth-child(2) div {
+            row-gap: 5px;
+        }
+    }
+
+    // Main-Gallery
+    %gallery-pic {
+        width: 30vh;
+        height: 30vh;
+    }
+
+    .pics {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        column-gap: 25px;
+
+        > aside:nth-child(odd), > aside:nth-child(even) {
+            @extend %gallery-pic;
+        }
+    } 
+
+    // Main-Skills
+    %profile-pic {
+        width: 25vh;
+        height: 25vh;
+    }
+
+    .profiles {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+
+        > aside:nth-child(1) {
+            @extend %profile-pic;
+        }
+
+        > aside:nth-child(2) {
+            @extend %profile-pic;
+        }
+
+        > aside:nth-child(3) {
+            @extend %profile-pic;
+        }
+
+        > aside:nth-child(4) {
+            @extend %profile-pic;
+        }
+    }
+
+    .design-skills {
+        > div:nth-child(2) {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: unset;
+        }
+    }
+
+    .skill-description {
+        width: 48%;
+        text-align: justify;
+    }
+
+    .progress-bar {
+        width: 48%;
+        row-gap: 15px;
+        
+        span {
+            height: 3vh;
+        }
+    }
+
+    // Main-Contact
+    .contact {
+        > article:nth-child(2) {
+            flex-direction: row;
+            justify-content: space-between;
+            
+            > article {
+                width: 48%;
+                text-align: justify;
+            }
+
+            form {
+                align-items: flex-end;
+                width: 48%;
+            }
+        
+        }        
+
+    }
+}
